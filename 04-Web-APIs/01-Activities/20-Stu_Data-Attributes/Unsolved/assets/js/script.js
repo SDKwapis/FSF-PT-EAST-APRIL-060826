@@ -1,7 +1,15 @@
-const container = document.querySelector('.container');
+const container = document.querySelector(".container");
 
-container.addEventListener('click', function (event) {
+container.addEventListener("click", function (event) {
   const element = event.target;
-
-  // TODO: Complete function
+  if (element.matches(".box")) {
+    const state = element.getAttribute("data-state");
+    if (state === "hidden") {
+      element.textContent = element.dataset.number;
+      element.dataset.state = "visible";
+    } else {
+      element.textContent = "";
+      element.setAttribtue("data-state", "hidden");
+    }
+  }
 });
