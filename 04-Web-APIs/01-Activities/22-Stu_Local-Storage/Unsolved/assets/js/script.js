@@ -13,6 +13,8 @@ function displayMessage(type, message) {
 }
 
 function renderLastRegistered() {
+  emailInput.textcontent = inputEmail
+  
   // TODO: Retrieve the last email and password and render it to the page
 }
 
